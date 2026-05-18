@@ -49,7 +49,7 @@
             pointer-events: none;
             position: absolute;
             inset: 0;
-            overflow-y: auto; /* Allow scrolling if content overflows on small screens */
+            overflow-y: auto; 
         }
         .slide.active {
             opacity: 1;
@@ -57,7 +57,6 @@
             pointer-events: auto;
             z-index: 10;
         }
-        /* Hide scrollbar for slides but keep functionality */
         .slide::-webkit-scrollbar {
             width: 6px;
         }
@@ -302,7 +301,75 @@
             </div>
         </div>
 
-        <!-- SLIDE 7: Project Charter - Information & Criteria -->
+        <!-- SLIDE 7: SWOT Analysis (NEW) -->
+        <div class="slide flex flex-col p-8 md:p-12 h-full justify-center bg-gray-50">
+            <div class="max-w-6xl mx-auto w-full">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">SWOT Analysis</h2>
+                <p class="text-gray-500 mb-8 text-lg font-light text-center">Strategic evaluation of the GigitAja platform.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Strengths -->
+                    <div class="bg-white p-6 rounded-2xl shadow-soft border-t-4 border-green-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3 text-green-600"><i class="fa-solid fa-dumbbell"></i></div>
+                            <h3 class="text-xl font-bold text-gray-900">Strengths</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Charity + commercial model attracts a broad market segment.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Social and environmental focus enhances business image.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Extensive potential partner network (restaurants, MSMEs, etc.).</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Affordable prices highly appeal to student and worker segments.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Weaknesses -->
+                    <div class="bg-white p-6 rounded-2xl shadow-soft border-t-4 border-red-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3 text-red-600"><i class="fa-solid fa-link-slash"></i></div>
+                            <h3 class="text-xl font-bold text-gray-900">Weaknesses</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2"></i> Highly dependent on partners (restaurants, MSMEs) for food supply.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2"></i> Difficult to consistently maintain surplus food quality.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2"></i> Market needs education to normalize buying surplus food.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2"></i> Charity model requires long-term funding to remain sustainable.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Opportunities -->
+                    <div class="bg-white p-6 rounded-2xl shadow-soft border-t-4 border-blue-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3 text-blue-600"><i class="fa-solid fa-lightbulb"></i></div>
+                            <h3 class="text-xl font-bold text-gray-900">Opportunities</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start"><i class="fa-solid fa-arrow-up text-blue-500 mt-1 mr-2"></i> Increasing public awareness regarding food waste reduction.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-arrow-up text-blue-500 mt-1 mr-2"></i> Collaboration prospects with NGOs, startups, and the government.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-arrow-up text-blue-500 mt-1 mr-2"></i> Emerging regulatory support for green/sustainability businesses.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-arrow-up text-blue-500 mt-1 mr-2"></i> Digital technology developments ease rapid business expansion.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-arrow-up text-blue-500 mt-1 mr-2"></i> Potential collaboration with existing food delivery platforms.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Threats -->
+                    <div class="bg-white p-6 rounded-2xl shadow-soft border-t-4 border-amber-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-3 text-amber-600"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h3 class="text-xl font-bold text-gray-900">Threats</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start"><i class="fa-solid fa-triangle-exclamation text-amber-500 mt-1 mr-2"></i> Competition from NGOs and food banks with similar goals.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-triangle-exclamation text-amber-500 mt-1 mr-2"></i> Large food delivery platforms could easily adopt this business model.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-triangle-exclamation text-amber-500 mt-1 mr-2"></i> Challenges in logistics and distribution of surplus food.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-triangle-exclamation text-amber-500 mt-1 mr-2"></i> Strict government regulations regarding food safety.</li>
+                            <li class="flex items-start"><i class="fa-solid fa-triangle-exclamation text-amber-500 mt-1 mr-2"></i> Unpredictable changes in public consumption habits.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: Project Charter - Information & Criteria -->
         <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-gray-50 text-gray-900">
             <div class="max-w-5xl mx-auto w-full">
                 <div class="flex items-center mb-6">
@@ -342,7 +409,7 @@
             </div>
         </div>
 
-        <!-- SLIDE 8: Project Charter - Scope & Schedule -->
+        <!-- SLIDE 9: Project Charter - Scope & Schedule -->
         <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-gray-50 text-gray-900">
             <div class="max-w-5xl mx-auto w-full">
                 <div class="flex items-center mb-6">
@@ -388,7 +455,7 @@
             </div>
         </div>
 
-        <!-- SLIDE 9: Project Charter - Assumptions & Risks -->
+        <!-- SLIDE 10: Project Charter - Assumptions & Risks -->
         <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-white">
             <div class="max-w-4xl mx-auto w-full">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Assumptions & Risk Management</h2>
@@ -425,7 +492,7 @@
             </div>
         </div>
 
-        <!-- SLIDE 10: Resource Requirements 1 -->
+        <!-- SLIDE 11: Resource Requirements 1 -->
         <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-subtle-dot">
             <div class="max-w-5xl mx-auto w-full">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Resource Requirements <span class="text-xl text-gray-400 font-light">1/2</span></h2>
@@ -465,7 +532,7 @@
             </div>
         </div>
 
-        <!-- SLIDE 11: Resource Requirements 2 -->
+        <!-- SLIDE 12: Resource Requirements 2 -->
         <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-subtle-dot">
             <div class="max-w-5xl mx-auto w-full">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Resource Requirements <span class="text-xl text-gray-400 font-light">2/2</span></h2>
@@ -504,7 +571,7 @@
             </div>
         </div>
 
-        <!-- SLIDE 12: Closing -->
+        <!-- SLIDE 13: Closing -->
         <div class="slide flex flex-col justify-center items-center p-12 text-center bg-white h-full">
             <h1 class="text-5xl md:text-7xl font-light text-gray-300 mb-4 tracking-tight">
                 Thank You.
