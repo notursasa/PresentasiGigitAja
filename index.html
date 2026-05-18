@@ -68,6 +68,17 @@
             background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
             background-size: 24px 24px;
         }
+        /* Organization Chart Connecting Lines */
+        .org-line-v {
+            width: 2px;
+            background-color: #059669; /* brand color */
+            margin: 0 auto;
+        }
+        .org-line-h {
+            height: 2px;
+            background-color: #059669;
+            width: 100%;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans h-screen w-full flex items-center justify-center p-4 lg:p-8">
@@ -740,7 +751,228 @@
             </div>
         </div>
 
-        <!-- SLIDE 14: Closing -->
+        <!-- SLIDE 14: Gantt Chart (NEW) -->
+        <div class="slide flex flex-col p-8 md:p-12 h-full justify-center bg-white">
+            <div class="max-w-6xl mx-auto w-full flex flex-col h-full justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">Project Schedule (Gantt Chart)</h2>
+                <p class="text-gray-500 mb-8 text-lg font-light text-center">Visual representation of the 6-month development timeline.</p>
+                
+                <div class="bg-gray-50 p-6 rounded-3xl shadow-soft border border-gray-200 overflow-x-auto">
+                    <div class="min-w-[700px]">
+                        <!-- Gantt Grid -->
+                        <div class="grid grid-cols-7 gap-2 text-sm">
+                            <!-- Headers -->
+                            <div class="font-bold text-gray-700 border-b border-gray-300 pb-3 pl-2">Task / Phase</div>
+                            <div class="font-bold text-center text-gray-600 border-b border-gray-300 pb-3">Month 1</div>
+                            <div class="font-bold text-center text-gray-600 border-b border-gray-300 pb-3">Month 2</div>
+                            <div class="font-bold text-center text-gray-600 border-b border-gray-300 pb-3">Month 3</div>
+                            <div class="font-bold text-center text-gray-600 border-b border-gray-300 pb-3">Month 4</div>
+                            <div class="font-bold text-center text-gray-600 border-b border-gray-300 pb-3">Month 5</div>
+                            <div class="font-bold text-center text-gray-600 border-b border-gray-300 pb-3">Month 6</div>
+
+                            <!-- Row 1 -->
+                            <div class="py-3 pl-2 font-medium text-gray-800 flex items-center">1. Initiation & Planning</div>
+                            <div class="col-span-1 py-2 px-1 relative">
+                                <div class="bg-blue-500 h-6 rounded-md shadow-sm w-full relative z-10 flex items-center px-2 text-white text-[10px] font-bold">Requirement</div>
+                            </div>
+                            <div class="col-span-5 border-l border-dashed border-gray-200"></div>
+
+                            <!-- Row 2 -->
+                            <div class="py-3 pl-2 font-medium text-gray-800 flex items-center">2. UI/UX Prototyping</div>
+                            <div class="col-span-1 py-2 px-1 relative">
+                                <div class="bg-blue-400 h-6 rounded-md shadow-sm w-full relative z-10 flex items-center px-2 text-white text-[10px] font-bold">Design</div>
+                            </div>
+                            <div class="col-span-5 border-l border-dashed border-gray-200"></div>
+
+                            <!-- Row 3 -->
+                            <div class="py-3 pl-2 font-medium text-gray-800 flex items-center">3. Backend & Database</div>
+                            <div class="col-span-1 border-l border-dashed border-gray-200"></div>
+                            <div class="col-span-2 py-2 px-1 relative">
+                                <div class="bg-purple-500 h-6 rounded-md shadow-sm w-full relative z-10 flex items-center px-2 text-white text-[10px] font-bold">Architecture & API Dev</div>
+                            </div>
+                            <div class="col-span-3 border-l border-dashed border-gray-200"></div>
+
+                            <!-- Row 4 -->
+                            <div class="py-3 pl-2 font-medium text-gray-800 flex items-center">4. Mobile App (Frontend)</div>
+                            <div class="col-span-1 border-l border-dashed border-gray-200"></div>
+                            <div class="col-span-1 border-l border-dashed border-gray-200"></div>
+                            <div class="col-span-2 py-2 px-1 relative">
+                                <div class="bg-brand h-6 rounded-md shadow-sm w-full relative z-10 flex items-center px-2 text-white text-[10px] font-bold">iOS & Android App Dev</div>
+                            </div>
+                            <div class="col-span-2 border-l border-dashed border-gray-200"></div>
+
+                            <!-- Row 5 -->
+                            <div class="py-3 pl-2 font-medium text-gray-800 flex items-center">5. AI & Payment Gateway</div>
+                            <div class="col-span-3 border-l border-dashed border-gray-200"></div>
+                            <div class="col-span-2 py-2 px-1 relative">
+                                <div class="bg-accent h-6 rounded-md shadow-sm w-full relative z-10 flex items-center px-2 text-white text-[10px] font-bold">Smart Match & QRIS</div>
+                            </div>
+                            <div class="col-span-1 border-l border-dashed border-gray-200"></div>
+
+                            <!-- Row 6 -->
+                            <div class="py-3 pl-2 font-medium text-gray-800 flex items-center">6. System Integration & QA</div>
+                            <div class="col-span-4 border-l border-dashed border-gray-200"></div>
+                            <div class="col-span-1 py-2 px-1 relative">
+                                <div class="bg-yellow-500 h-6 rounded-md shadow-sm w-full relative z-10 flex items-center px-2 text-white text-[10px] font-bold">UAT Testing</div>
+                            </div>
+                            <div class="col-span-1 border-l border-dashed border-gray-200"></div>
+
+                            <!-- Row 7 -->
+                            <div class="py-3 pl-2 font-medium text-gray-800 flex items-center">7. Go-Live & Deployment</div>
+                            <div class="col-span-5 border-l border-dashed border-gray-200"></div>
+                            <div class="col-span-1 py-2 px-1 relative">
+                                <div class="bg-green-600 h-6 rounded-md shadow-sm w-full relative z-10 flex items-center justify-center px-2 text-white text-[10px] font-bold">Launch!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 15: Work Breakdown Structure (NEW) -->
+        <div class="slide flex flex-col p-8 md:p-12 h-full justify-center bg-gray-50">
+            <div class="max-w-6xl mx-auto w-full flex flex-col h-full justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">Work Breakdown Structure (WBS)</h2>
+                <p class="text-gray-500 mb-8 text-lg font-light text-center">Hierarchical decomposition of the GigitAja project scope.</p>
+                
+                <div class="w-full flex justify-center mt-4">
+                    <div class="flex flex-col items-center w-full max-w-5xl">
+                        <!-- ROOT NODE -->
+                        <div class="bg-gray-900 text-white font-bold py-3 px-8 rounded-xl shadow-lg z-10 text-lg border-2 border-gray-800">
+                            GigitAja Mobile Platform
+                        </div>
+                        
+                        <!-- ROOT VERTICAL LINE -->
+                        <div class="org-line-v h-6"></div>
+                        
+                        <!-- HORIZONTAL CONNECTOR -->
+                        <div class="relative w-[85%]">
+                            <div class="org-line-h absolute top-0"></div>
+                            
+                            <!-- LEVEL 2 NODES CONTAINER -->
+                            <div class="flex justify-between w-full pt-0">
+                                
+                                <!-- NODE 1.0 -->
+                                <div class="flex flex-col items-center w-1/4 relative">
+                                    <div class="org-line-v h-6 absolute top-0"></div>
+                                    <div class="bg-white border-2 border-brand text-brand-900 font-bold py-2 px-2 rounded-lg mt-6 shadow-md w-11/12 text-center text-sm">
+                                        1.0 Project Mgt
+                                    </div>
+                                    <div class="w-0.5 h-4 bg-gray-300"></div>
+                                    <div class="bg-gray-100 border border-gray-300 rounded p-1.5 text-[11px] w-10/12 text-center mb-1 text-gray-700">1.1 Project Charter</div>
+                                    <div class="w-0.5 h-2 bg-gray-300"></div>
+                                    <div class="bg-gray-100 border border-gray-300 rounded p-1.5 text-[11px] w-10/12 text-center mb-1 text-gray-700">1.2 Agile Planning</div>
+                                </div>
+
+                                <!-- NODE 2.0 -->
+                                <div class="flex flex-col items-center w-1/4 relative">
+                                    <div class="org-line-v h-6 absolute top-0"></div>
+                                    <div class="bg-white border-2 border-brand text-brand-900 font-bold py-2 px-2 rounded-lg mt-6 shadow-md w-11/12 text-center text-sm">
+                                        2.0 UI/UX Design
+                                    </div>
+                                    <div class="w-0.5 h-4 bg-gray-300"></div>
+                                    <div class="bg-gray-100 border border-gray-300 rounded p-1.5 text-[11px] w-10/12 text-center mb-1 text-gray-700">2.1 Wireframing</div>
+                                    <div class="w-0.5 h-2 bg-gray-300"></div>
+                                    <div class="bg-gray-100 border border-gray-300 rounded p-1.5 text-[11px] w-10/12 text-center mb-1 text-gray-700">2.2 Prototyping</div>
+                                </div>
+
+                                <!-- NODE 3.0 -->
+                                <div class="flex flex-col items-center w-1/4 relative">
+                                    <div class="org-line-v h-6 absolute top-0"></div>
+                                    <div class="bg-white border-2 border-brand text-brand-900 font-bold py-2 px-2 rounded-lg mt-6 shadow-md w-11/12 text-center text-sm">
+                                        3.0 Development
+                                    </div>
+                                    <div class="w-0.5 h-4 bg-gray-300"></div>
+                                    <div class="bg-gray-100 border border-gray-300 rounded p-1.5 text-[11px] w-10/12 text-center mb-1 text-gray-700">3.1 Database & API</div>
+                                    <div class="w-0.5 h-2 bg-gray-300"></div>
+                                    <div class="bg-gray-100 border border-gray-300 rounded p-1.5 text-[11px] w-10/12 text-center mb-1 text-gray-700">3.2 Mobile Frontend</div>
+                                    <div class="w-0.5 h-2 bg-gray-300"></div>
+                                    <div class="bg-gray-100 border border-gray-300 rounded p-1.5 text-[11px] w-10/12 text-center mb-1 text-gray-700">3.3 Smart Match AI</div>
+                                </div>
+
+                                <!-- NODE 4.0 -->
+                                <div class="flex flex-col items-center w-1/4 relative">
+                                    <div class="org-line-v h-6 absolute top-0"></div>
+                                    <div class="bg-white border-2 border-brand text-brand-900 font-bold py-2 px-2 rounded-lg mt-6 shadow-md w-11/12 text-center text-sm">
+                                        4.0 Test & Deploy
+                                    </div>
+                                    <div class="w-0.5 h-4 bg-gray-300"></div>
+                                    <div class="bg-gray-100 border border-gray-300 rounded p-1.5 text-[11px] w-10/12 text-center mb-1 text-gray-700">4.1 QA & Security</div>
+                                    <div class="w-0.5 h-2 bg-gray-300"></div>
+                                    <div class="bg-gray-100 border border-gray-300 rounded p-1.5 text-[11px] w-10/12 text-center mb-1 text-gray-700">4.2 User Acceptance</div>
+                                    <div class="w-0.5 h-2 bg-gray-300"></div>
+                                    <div class="bg-gray-100 border border-gray-300 rounded p-1.5 text-[11px] w-10/12 text-center mb-1 text-gray-700">4.3 App Store Launch</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 16: Risk Management Plan (NEW) -->
+        <div class="slide flex flex-col p-8 md:p-12 h-full justify-center bg-white">
+            <div class="max-w-6xl mx-auto w-full flex flex-col h-full justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">Comprehensive Risk Plan</h2>
+                <p class="text-gray-500 mb-8 text-lg font-light text-center">Detailed risk assessment and mitigation strategies (Risk Register).</p>
+                
+                <div class="bg-white rounded-3xl shadow-soft border border-gray-100 overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-4 w-12 text-center border-b">ID</th>
+                                    <th class="px-4 py-4 w-1/5 border-b">Risk Description</th>
+                                    <th class="px-4 py-4 w-24 text-center border-b">Probability</th>
+                                    <th class="px-4 py-4 w-24 text-center border-b">Impact</th>
+                                    <th class="px-4 py-4 border-b">Mitigation Strategy</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-bold text-gray-900">R01</td>
+                                    <td class="px-4 py-3 font-semibold text-gray-800">Giant Competitors Copy Feature</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded font-bold text-xs">Medium</span></td>
+                                    <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-red-100 text-red-800 rounded font-bold text-xs">High</span></td>
+                                    <td class="px-4 py-3 text-gray-600">Implement Hybrid Model (Charity + Commercial) to build niche loyalty that is difficult for purely transactional corporate platforms to replicate.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-bold text-gray-900">R02</td>
+                                    <td class="px-4 py-3 font-semibold text-gray-800">Food Safety / Spoilage Issue</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded font-bold text-xs">Medium</span></td>
+                                    <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-red-100 text-red-800 rounded font-bold text-xs">High</span></td>
+                                    <td class="px-4 py-3 text-gray-600">Draft strict Terms & Conditions (T&C) to shift liability to merchants. Provide immediate reporting and transparent rating system for users.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-bold text-gray-900">R03</td>
+                                    <td class="px-4 py-3 font-semibold text-gray-800">Server Downtime at Peak Hours</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-green-100 text-green-800 rounded font-bold text-xs">Low</span></td>
+                                    <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded font-bold text-xs">Medium</span></td>
+                                    <td class="px-4 py-3 text-gray-600">Deploy backend on auto-scalable cloud infrastructure (AWS/Google Cloud) capable of handling sudden traffic spikes automatically.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-bold text-gray-900">R04</td>
+                                    <td class="px-4 py-3 font-semibold text-gray-800">Low Merchant Adoption Rate</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded font-bold text-xs">Medium</span></td>
+                                    <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded font-bold text-xs">Medium</span></td>
+                                    <td class="px-4 py-3 text-gray-600">Allocate B2B sales team to assist initial setup for merchants and design a highly simplified "1-minute upload" merchant dashboard.</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-bold text-gray-900">R05</td>
+                                    <td class="px-4 py-3 font-semibold text-gray-800">Cloud Hosting Budget Overrun</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-green-100 text-green-800 rounded font-bold text-xs">Low</span></td>
+                                    <td class="px-4 py-3 text-center"><span class="px-2 py-1 bg-red-100 text-red-800 rounded font-bold text-xs">High</span></td>
+                                    <td class="px-4 py-3 text-gray-600">Set up strict billing alerts/alarms on cloud platforms. Optimize database queries and apply for university/startup incubator cloud credits.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 17: Closing -->
         <div class="slide flex flex-col justify-center items-center p-12 text-center bg-white h-full">
             <h1 class="text-5xl md:text-7xl font-light text-gray-300 mb-4 tracking-tight">
                 Thank You.
