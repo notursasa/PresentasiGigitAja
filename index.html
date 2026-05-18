@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Presentation: GigitAja</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            DEFAULT: '#059669', // Emerald 600
+                            700: '#047857',
+                            900: '#064e3b',
+                        },
+                        accent: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            DEFAULT: '#f97316', // Orange 500
+                            600: '#ea580c',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .slide {
+            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+            opacity: 0;
+            transform: translateY(15px);
+            pointer-events: none;
+            position: absolute;
+            inset: 0;
+            overflow-y: auto; /* Allow scrolling if content overflows on small screens */
+        }
+        .slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            z-index: 10;
+        }
+        /* Hide scrollbar for slides but keep functionality */
+        .slide::-webkit-scrollbar {
+            width: 6px;
+        }
+        .slide::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 10px;
+        }
+        .bg-subtle-dot {
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans h-screen w-full flex items-center justify-center p-4 lg:p-8">
+
+    <!-- Presentation Container -->
+    <div id="presentation-container" class="relative w-full h-full max-w-6xl shadow-2xl rounded-2xl bg-white overflow-hidden flex flex-col">
+        
+        <!-- SLIDE 1: Main Title -->
+        <div class="slide active flex flex-col justify-center items-center p-8 md:p-16 text-center bg-subtle-dot h-full">
+            <div class="mb-8 p-6 bg-white rounded-full shadow-soft animate-bounce">
+                <i class="fa-solid fa-leaf text-5xl text-brand"></i>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                Gigit<span class="text-brand">Aja</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-500 mb-10 font-light max-w-2xl">
+                Food Tech & Sustainability-Based Mobile Platform
+            </p>
+            <div class="bg-white p-8 rounded-2xl shadow-soft w-full max-w-lg">
+                <h3 class="text-xs uppercase tracking-[0.2em] text-gray-400 font-bold mb-4">Development Team (Group 9)</h3>
+                <ul class="text-left text-gray-600 space-y-3 font-medium">
+                    <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-brand mr-3"></div> Aisyah Raissa Algebra (2702354092)</li>
+                    <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-brand mr-3"></div> Debora Agnes Siregar (2702355183)</li>
+                    <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-brand mr-3"></div> Grazellin Librika Milagros (2702329802)</li>
+                    <li class="flex items-center"><div class="w-2 h-2 rounded-full bg-brand mr-3"></div> Michelle Imanuella Amanresmi (2802513155)</li>
+                </ul>
+            </div>
+            <div class="mt-12 text-sm text-gray-400 tracking-wide">Information System Project Management • GSLC Session 10</div>
+        </div>
+
+        <!-- SLIDE 2: Problem Background -->
+        <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-white">
+            <div class="max-w-4xl mx-auto w-full">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Problem Background</h2>
+                <p class="text-gray-500 mb-10 text-lg font-light">The urgency of the <em>food loss and waste</em> issue in Indonesia.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-soft transition-transform hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-red-50 flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-trash-can text-2xl text-red-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Financial & Ecological Losses</h3>
+                        <p class="text-gray-600 leading-relaxed">Indonesia ranks <strong>44th out of 78 countries</strong>, wasting around <strong>20.9 million tons</strong> of food annually. For F&B businesses, this is a <em>sunk cost</em> that hurts margins and contributes to carbon emissions.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-soft transition-transform hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-accent-50 flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-bowl-rice text-2xl text-accent"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Food Access Gap</h3>
+                        <p class="text-gray-600 leading-relaxed">Millions of people, including student and worker demographics, desperately need access to quality food at more affordable and economical prices.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gray-50 p-6 rounded-2xl shadow-inner flex items-start">
+                    <i class="fa-solid fa-circle-exclamation text-brand mt-1 mr-4 text-xl"></i>
+                    <div>
+                        <h4 class="font-bold text-gray-900 mb-1">Market Gap</h4>
+                        <p class="text-gray-600 text-sm">There is no centralized digital platform in Indonesia that comprehensively integrates commercial solutions (selling surplus food at a discount) and social solutions (donations) into a single ecosystem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: Proposed Solution -->
+        <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-gray-50">
+            <div class="max-w-4xl mx-auto w-full">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Information System Solution</h2>
+                <p class="text-gray-500 mb-10 text-lg font-light">A <em>Hybrid Model</em> approach to bridge the market gap.</p>
+                
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- Commercial Module -->
+                    <div class="flex-1 bg-white p-8 rounded-2xl shadow-soft relative overflow-hidden">
+                        <div class="absolute -right-4 -top-4 opacity-5">
+                            <i class="fa-solid fa-store text-9xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand mb-4">Commercial Module</h3>
+                        <div class="inline-block px-3 py-1 bg-brand-50 text-brand text-xs font-bold rounded-full mb-4">B2B to B2C</div>
+                        <p class="text-gray-600 leading-relaxed">
+                            A system enabling <em>merchants</em> (restaurants/cafes) to upload their expiring surplus food inventory in <em>real-time</em>.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600 font-medium">
+                            <li><i class="fa-solid fa-check text-brand mr-2"></i> Price discounts of <strong>50-80%</strong>.</li>
+                            <li><i class="fa-solid fa-check text-brand mr-2"></i> Primary target: Students & workers.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Charity Module -->
+                    <div class="flex-1 bg-white p-8 rounded-2xl shadow-soft relative overflow-hidden">
+                        <div class="absolute -right-4 -top-4 opacity-5">
+                            <i class="fa-solid fa-hand-holding-heart text-9xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent mb-4">Charity Module</h3>
+                        <div class="inline-block px-3 py-1 bg-accent-50 text-accent text-xs font-bold rounded-full mb-4">Social Donation</div>
+                        <p class="text-gray-600 leading-relaxed">
+                            An integrated <em>one-click</em> donation system to help communities in need directly through the app.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-sm text-gray-600 font-medium">
+                            <li><i class="fa-solid fa-check text-accent mr-2"></i> <strong>SOS Food</strong> feature.</li>
+                            <li><i class="fa-solid fa-check text-accent mr-2"></i> Distribution through partner NGOs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: Scope & Key Features -->
+        <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-white">
+            <div class="max-w-5xl mx-auto w-full">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Scope & Key Features</h2>
+                <p class="text-gray-500 mb-10 text-lg font-light">Technical specifications of the GigitAja <em>Project Scope</em>.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex bg-gray-50 p-6 rounded-2xl shadow-sm">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fa-solid fa-brain text-brand text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-1">Smart Match Algorithm (AI)</h4>
+                            <p class="text-sm text-gray-600">Artificial intelligence to match surplus food supply with nearby user preferences and geolocation to accelerate sales turnaround time.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex bg-gray-50 p-6 rounded-2xl shadow-sm">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fa-solid fa-chart-line text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-1">Merchant Dashboard</h4>
+                            <p class="text-sm text-gray-600">A dedicated module for food providers to monitor surplus inventory, set instant discounts, and view revenue analytics.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex bg-gray-50 p-6 rounded-2xl shadow-sm">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fa-solid fa-credit-card text-accent text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-1">Integrated Payment System</h4>
+                            <p class="text-sm text-gray-600">Integration of <em>Payment Gateways</em> (e.g., E-Wallets & QRIS) to facilitate transparent, secure, and seamless transactions.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex bg-gray-50 p-6 rounded-2xl shadow-sm">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0 mr-4">
+                            <i class="fa-solid fa-star text-yellow-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-1">Gamification</h4>
+                            <p class="text-sm text-gray-600">A reward or point system for users (both buyers and donors) to increase app retention and long-term engagement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: Business Value & Project Viability -->
+        <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-subtle-dot">
+            <div class="max-w-4xl mx-auto w-full text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Business Value & Project Viability</h2>
+                <p class="text-gray-500 mb-12 text-lg font-light">Target market and <em>Return on Investment</em> (ROI) strategy.</p>
+                
+                <div class="bg-white p-10 rounded-3xl shadow-soft mb-8">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-brand-50 rounded-full mb-4">
+                        <i class="fa-solid fa-map-location-dot text-2xl text-brand"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Pilot Project: Malang City</h3>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Potential market share of <strong class="text-gray-900 text-lg">330,000 active students</strong> who are highly responsive to economical prices and practical technology.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                    <div class="bg-white p-6 rounded-2xl shadow-card flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mr-4">
+                            <i class="fa-solid fa-percent text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Transaction Commission</h4>
+                            <p class="text-sm text-gray-500">10-20% take-rate from every surplus food sale.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-card flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mr-4">
+                            <i class="fa-solid fa-crown text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Premium Monetization & Ads</h4>
+                            <p class="text-sm text-gray-500">B2C premium subscriptions and Featured Listings for partners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: Ultimate Goal & Project Impact (ESG) -->
+        <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-white">
+            <div class="max-w-4xl mx-auto w-full">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">Ultimate Goal & Project Impact</h2>
+                <p class="text-gray-500 mb-10 text-lg font-light text-center">Tangible Eco-Social impact from GigitAja's success.</p>
+                
+                <div class="space-y-6">
+                    <div class="bg-gray-50 p-6 rounded-2xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mr-6 flex-shrink-0">
+                            <i class="fa-solid fa-chart-pie text-2xl text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Economic Impact</h3>
+                            <p class="text-gray-600">Helps restaurants turn food waste <em>sunk costs</em> into revenue, while providing a cheap food alternative for the public.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-50 p-6 rounded-2xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mr-6 flex-shrink-0">
+                            <i class="fa-solid fa-earth-asia text-2xl text-brand"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Environmental Impact</h3>
+                            <p class="text-gray-600">Pioneers the <em>Zero Food Waste</em> movement and actively reduces carbon emissions produced from organic waste in landfills.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-accent-50 p-6 rounded-2xl flex items-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mr-6 flex-shrink-0">
+                            <i class="fa-solid fa-people-carry-box text-2xl text-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Social Impact</h3>
+                            <p class="text-gray-600">Builds a caring communal ecosystem and improves food security for the most vulnerable groups in society.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: Project Charter - Information & Criteria -->
+        <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-gray-50 text-gray-900">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="flex items-center mb-6">
+                    <i class="fa-solid fa-file-contract text-4xl text-brand mr-4"></i>
+                    <h2 class="text-3xl md:text-4xl font-bold">Project Charter <span class="font-light text-gray-400">| Part 1</span></h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <!-- General Information -->
+                    <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100">
+                        <h3 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6 border-b border-gray-200 pb-2">General Information</h3>
+                        <ul class="space-y-4">
+                            <li><span class="block text-xs text-gray-500 mb-1">Project Managers</span> Group 9 (Aisyah, Debora, Grazellin, Michelle)</li>
+                            <li><span class="block text-xs text-gray-500 mb-1">Key Users</span> F&B Partners (B2B), Students (B2C), NGOs (Charity)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Success Criteria -->
+                    <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100">
+                        <h3 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6 border-b border-gray-200 pb-2">Success Criteria</h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-brand mt-1 mr-3"></i>
+                                <span><strong>Business:</strong> Release MVP in 6 months. Acquire 10,000 users & 50 F&B partners (Q1).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-brand mt-1 mr-3"></i>
+                                <span><strong>ESG:</strong> Reduce organic waste in landfills, achieve food distribution via SOS Food module.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-brand mt-1 mr-3"></i>
+                                <span><strong>Technical:</strong> Pass <em>User Acceptance Testing (UAT)</em>, 99.9% server uptime, zero API security vulnerabilities.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: Project Charter - Scope & Schedule -->
+        <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-gray-50 text-gray-900">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="flex items-center mb-6">
+                    <i class="fa-solid fa-crosshairs text-4xl text-accent mr-4"></i>
+                    <h2 class="text-3xl md:text-4xl font-bold">Project Charter <span class="font-light text-gray-400">| Part 2</span></h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <!-- Scope -->
+                    <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100">
+                        <h3 class="text-sm font-bold text-brand uppercase tracking-widest mb-4">In-Scope</h3>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                            <li>• Cross-platform Mobile App</li>
+                            <li>• Commercial & Charity Modules</li>
+                            <li>• Smart Match Algorithm (AI) & Payment Gateway</li>
+                        </ul>
+
+                        <h3 class="text-sm font-bold text-red-500 uppercase tracking-widest mb-4">Out-of-Scope</h3>
+                        <ul class="space-y-2 text-sm text-gray-500">
+                            <li><i class="fa-solid fa-xmark mr-2"></i> No internal delivery fleet provided.</li>
+                            <li><i class="fa-solid fa-xmark mr-2"></i> No physical storage/refrigerators provided.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Schedule & Budget -->
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-soft border border-gray-100 flex-1">
+                            <h3 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Macro Schedule (6 Months)</h3>
+                            <ul class="space-y-2 text-xs text-gray-600">
+                                <li><strong class="text-gray-900">Month 1:</strong> Initiation & UI/UX</li>
+                                <li><strong class="text-gray-900">Month 2-3:</strong> Backend, Database & Dashboard</li>
+                                <li><strong class="text-gray-900">Month 4:</strong> Mobile Frontend & Payment Gateway</li>
+                                <li><strong class="text-gray-900">Month 5:</strong> AI, System Integration, QA/UAT</li>
+                                <li><strong class="text-gray-900">Month 6:</strong> Deployment, Merchant Training, Go-Live</li>
+                            </ul>
+                        </div>
+                        <div class="bg-brand-50 p-6 rounded-2xl shadow-sm border border-brand-100">
+                            <h3 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Budget Estimate (CAPEX & OPEX)</h3>
+                            <p class="text-2xl font-bold text-brand-700">IDR 250 Million - IDR 350 Million</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 9: Project Charter - Assumptions & Risks -->
+        <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-white">
+            <div class="max-w-4xl mx-auto w-full">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Assumptions & Risk Management</h2>
+                <p class="text-gray-500 mb-10 text-lg font-light">Part 3 of the GigitAja Project Charter.</p>
+                
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <i class="fa-solid fa-users-slash text-red-500 mr-3 text-lg"></i>
+                            <h4 class="font-bold text-gray-900 text-lg">1. Business Competition Risk</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-2">Major players like GoFood/GrabFood releasing similar surplus food features.</p>
+                        <p class="text-sm bg-green-50 text-green-800 p-3 rounded-lg border border-green-100"><strong>Mitigation:</strong> Strong focus on the <em>Hybrid Model</em> (Charity + Commercial) and building niche market loyalty among university communities that is hard for large corporations to replicate.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <i class="fa-solid fa-biohazard text-red-500 mr-3 text-lg"></i>
+                            <h4 class="font-bold text-gray-900 text-lg">2. Food Quality Risk</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-2">Incidents of spoiled or unfit food being sold/donated.</p>
+                        <p class="text-sm bg-green-50 text-green-800 p-3 rounded-lg border border-green-100"><strong>Mitigation:</strong> Strict Terms & Conditions (T&C) transferring food damage liability to <em>Merchants</em>, alongside a transparent rating & review system.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <i class="fa-solid fa-server text-red-500 mr-3 text-lg"></i>
+                            <h4 class="font-bold text-gray-900 text-lg">3. Technology Risk</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-2">Server <em>downtime</em> during simultaneous high traffic (e.g., right before restaurant closing times).</p>
+                        <p class="text-sm bg-green-50 text-green-800 p-3 rounded-lg border border-green-100"><strong>Mitigation:</strong> Utilizing an <em>auto-scalable</em> cloud hosting architecture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 10: Resource Requirements 1 -->
+        <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-subtle-dot">
+            <div class="max-w-5xl mx-auto w-full">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Resource Requirements <span class="text-xl text-gray-400 font-light">1/2</span></h2>
+                <p class="text-gray-500 mb-10 text-lg font-light">Human & Technological Resource Needs.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- HR -->
+                    <div class="bg-white p-8 rounded-3xl shadow-soft border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mr-3"><i class="fa-solid fa-users text-blue-600"></i></div>
+                            Human Resources
+                        </h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li><strong class="text-gray-900 block">PM / Scrum Master:</strong> Manages team schedule, risks & communication.</li>
+                            <li><strong class="text-gray-900 block">UI/UX Designer:</strong> Designs Merchant and consumer app interfaces.</li>
+                            <li><strong class="text-gray-900 block">Mobile Dev (Frontend):</strong> Builds iOS & Android apps (Flutter/React Native).</li>
+                            <li><strong class="text-gray-900 block">Backend & DBA:</strong> Server architecture & Smart Match AI.</li>
+                            <li><strong class="text-gray-900 block">QA Engineer:</strong> Security & functional testing (bug-free).</li>
+                            <li><strong class="text-gray-900 block">Biz Dev / Sales (B2B):</strong> Pitches to F&B and acquires partner NGOs.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tech -->
+                    <div class="bg-white p-8 rounded-3xl shadow-soft border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center mr-3"><i class="fa-solid fa-microchip text-purple-600"></i></div>
+                            Technological Resources
+                        </h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li><strong class="text-gray-900 block">Cloud Server & Hosting:</strong> Hosts auto-scalable database and backend (AWS, Google Cloud).</li>
+                            <li><strong class="text-gray-900 block">Maps/Geolocation API:</strong> Smart Match feature for radius tracking (Google Maps API).</li>
+                            <li><strong class="text-gray-900 block">Payment Gateway API:</strong> Secure QRIS & E-Wallet transaction processing (Midtrans, Xendit).</li>
+                            <li><strong class="text-gray-900 block">Management Software:</strong> Team and sprint planning management (Jira/Trello).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 11: Resource Requirements 2 -->
+        <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-subtle-dot">
+            <div class="max-w-5xl mx-auto w-full">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Resource Requirements <span class="text-xl text-gray-400 font-light">2/2</span></h2>
+                <p class="text-gray-500 mb-10 text-lg font-light">Financial & Physical Resource Needs.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Finance -->
+                    <div class="bg-white p-8 rounded-3xl shadow-soft border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mr-3"><i class="fa-solid fa-wallet text-green-600"></i></div>
+                            Financial Resources
+                        </h3>
+                        <div class="bg-gray-50 p-4 rounded-xl mb-6 text-center shadow-inner">
+                            <span class="block text-xs text-gray-500 uppercase tracking-widest mb-1">Total Estimate</span>
+                            <span class="text-lg font-bold text-gray-800">IDR 250 Million - IDR 350 Million</span>
+                        </div>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li><strong class="text-gray-900 block">CAPEX (Capital Exp):</strong> Development capital, 6-month developer salaries, software licenses, design creation.</li>
+                            <li><strong class="text-gray-900 block">OPEX (Operational Exp):</strong> Customer Acquisition Cost (Malang campus campaigns), cloud rent, field team operations.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Physical -->
+                    <div class="bg-white p-8 rounded-3xl shadow-soft border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center mr-3"><i class="fa-solid fa-laptop text-amber-600"></i></div>
+                            Physical Resources
+                        </h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li><strong class="text-gray-900 block">Main Hardware:</strong> High-spec laptops for optimal programming & graphic design workloads.</li>
+                            <li><strong class="text-gray-900 block">Testing Devices:</strong> Various smartphone variants (iOS/Android) focusing on mid-range devices to ensure UAT smoothness.</li>
+                            <li><strong class="text-gray-900 block">Co-working Space:</strong> Physical workspace with stable internet for daily team synchronization (<em>Daily Standup</em>).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 12: Closing -->
+        <div class="slide flex flex-col justify-center items-center p-12 text-center bg-white h-full">
+            <h1 class="text-5xl md:text-7xl font-light text-gray-300 mb-4 tracking-tight">
+                Thank You.
+            </h1>
+            <p class="text-lg text-brand font-semibold tracking-widest uppercase">GigitAja • Group 9</p>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="absolute bottom-0 w-full bg-white/90 backdrop-blur border-t border-gray-100 p-4 flex justify-between items-center z-50">
+            <button id="prevBtn" class="px-5 py-2.5 bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 rounded-xl font-medium transition shadow-sm disabled:opacity-30 disabled:cursor-not-allowed">
+                <i class="fa-solid fa-chevron-left mr-2"></i> Prev
+            </button>
+            
+            <!-- Dots Indicator -->
+            <div id="dots-container" class="flex space-x-2 items-center">
+                <!-- Auto generated by JS -->
+            </div>
+
+            <button id="nextBtn" class="px-5 py-2.5 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-medium transition shadow-soft disabled:opacity-30 disabled:cursor-not-allowed">
+                Next <i class="fa-solid fa-chevron-right ml-2"></i>
+            </button>
+        </div>
+        
+        <!-- Progress Bar -->
+        <div class="absolute bottom-[72px] left-0 w-full h-1 bg-transparent z-50">
+            <div id="progress-bar" class="h-full bg-brand opacity-80 transition-all duration-300 w-0"></div>
+        </div>
+    </div>
+
+    <!-- JS Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dotsContainer = document.getElementById('dots-container');
+            const progressBar = document.getElementById('progress-bar');
+            let currentSlide = 0;
+
+            // Generate Dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('rounded-full', 'transition-all', 'duration-300', 'cursor-pointer');
+                if (index === 0) {
+                    dot.classList.add('bg-brand', 'w-6', 'h-2');
+                } else {
+                    dot.classList.add('bg-gray-300', 'w-2', 'h-2', 'hover:bg-gray-400');
+                }
+                
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+                
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = dotsContainer.querySelectorAll('div');
+
+            function updateUI() {
+                // Update Slides
+                slides.forEach((slide, index) => {
+                    if (index === currentSlide) {
+                        slide.classList.add('active');
+                    } else {
+                        slide.classList.remove('active');
+                    }
+                });
+
+                // Update Buttons
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === slides.length - 1;
+
+                // Update Dots
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.className = 'rounded-full transition-all duration-300 cursor-pointer bg-brand w-6 h-2';
+                    } else {
+                        dot.className = 'rounded-full transition-all duration-300 cursor-pointer bg-gray-300 w-2 h-2 hover:bg-gray-400';
+                    }
+                });
+
+                // Update Progress Bar
+                const progress = ((currentSlide) / (slides.length - 1)) * 100;
+                progressBar.style.width = `${progress}%`;
+            }
+
+            function goToSlide(index) {
+                if (index >= 0 && index < slides.length) {
+                    currentSlide = index;
+                    updateUI();
+                }
+            }
+
+            // Button Event Listeners
+            prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+            // Keyboard Navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' || e.key === 'Space') {
+                    goToSlide(currentSlide + 1);
+                } else if (e.key === 'ArrowLeft') {
+                    goToSlide(currentSlide - 1);
+                }
+            });
+
+            // Initial UI update
+            updateUI();
+        });
+    </script>
+</body>
+</html>
