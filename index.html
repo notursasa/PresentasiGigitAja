@@ -301,15 +301,88 @@
             </div>
         </div>
 
-        <!-- SLIDE 7: SWOT Analysis (NEW) -->
+        <!-- SLIDE 7: Product Backlog -->
         <div class="slide flex flex-col p-8 md:p-12 h-full justify-center bg-gray-50">
+            <div class="max-w-6xl mx-auto w-full flex flex-col h-full justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">Product Backlog</h2>
+                <p class="text-gray-500 mb-8 text-lg font-light text-center">Prioritized feature list for Agile development.</p>
+                
+                <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100 flex flex-col max-h-[60vh]">
+                    <div class="overflow-y-auto overflow-x-auto rounded-xl border border-gray-100">
+                        <table class="w-full text-sm text-left text-gray-600 relative">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 sticky top-0 z-10 shadow-sm">
+                                <tr>
+                                    <th class="px-4 py-4 w-16 text-center border-b border-gray-200">No.</th>
+                                    <th class="px-4 py-4 w-1/4 border-b border-gray-200">Feature</th>
+                                    <th class="px-4 py-4 border-b border-gray-200">Description</th>
+                                    <th class="px-4 py-4 w-28 text-center border-b border-gray-200">Priority</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-semibold text-gray-900">1</td>
+                                    <td class="px-4 py-3 font-bold text-gray-800">User Authentication</td>
+                                    <td class="px-4 py-3 text-gray-600">Secure login/registration system for B2C users, NGOs, and B2B merchants.</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700">High</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-semibold text-gray-900">2</td>
+                                    <td class="px-4 py-3 font-bold text-gray-800">Merchant Dashboard</td>
+                                    <td class="px-4 py-3 text-gray-600">Interface for F&B partners to upload surplus food inventory and set discounts in real-time.</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700">High</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-semibold text-gray-900">3</td>
+                                    <td class="px-4 py-3 font-bold text-gray-800">Commercial Marketplace</td>
+                                    <td class="px-4 py-3 text-gray-600">B2C catalog displaying discounted surplus food with basic search and filter options.</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700">High</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-semibold text-gray-900">4</td>
+                                    <td class="px-4 py-3 font-bold text-gray-800">Payment Gateway</td>
+                                    <td class="px-4 py-3 text-gray-600">Secure transaction processing integrating E-Wallets and QRIS.</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-700">High</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-semibold text-gray-900">5</td>
+                                    <td class="px-4 py-3 font-bold text-gray-800">Charity Module (SOS Food)</td>
+                                    <td class="px-4 py-3 text-gray-600">One-click donation feature to channel safe surplus food to partner NGOs.</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold bg-yellow-100 text-yellow-700">Medium</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-semibold text-gray-900">6</td>
+                                    <td class="px-4 py-3 font-bold text-gray-800">Smart Match AI</td>
+                                    <td class="px-4 py-3 text-gray-600">Geolocation-based recommendation engine for nearby food based on user preferences.</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold bg-yellow-100 text-yellow-700">Medium</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-semibold text-gray-900">7</td>
+                                    <td class="px-4 py-3 font-bold text-gray-800">Gamification System</td>
+                                    <td class="px-4 py-3 text-gray-600">Reward point mechanism for users making purchases or participating in donations.</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700">Low</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 text-center font-semibold text-gray-900">8</td>
+                                    <td class="px-4 py-3 font-bold text-gray-800">Rating & Reviews</td>
+                                    <td class="px-4 py-3 text-gray-600">Feedback system for users to rate food quality and merchant service transparency.</td>
+                                    <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700">Low</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: SWOT Analysis -->
+        <div class="slide flex flex-col p-8 md:p-12 h-full justify-center bg-white">
             <div class="max-w-6xl mx-auto w-full">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">SWOT Analysis</h2>
                 <p class="text-gray-500 mb-8 text-lg font-light text-center">Strategic evaluation of the GigitAja platform.</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Strengths -->
-                    <div class="bg-white p-6 rounded-2xl shadow-soft border-t-4 border-green-500">
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-soft border-t-4 border-green-500">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3 text-green-600"><i class="fa-solid fa-dumbbell"></i></div>
                             <h3 class="text-xl font-bold text-gray-900">Strengths</h3>
@@ -323,7 +396,7 @@
                     </div>
 
                     <!-- Weaknesses -->
-                    <div class="bg-white p-6 rounded-2xl shadow-soft border-t-4 border-red-500">
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-soft border-t-4 border-red-500">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3 text-red-600"><i class="fa-solid fa-link-slash"></i></div>
                             <h3 class="text-xl font-bold text-gray-900">Weaknesses</h3>
@@ -337,7 +410,7 @@
                     </div>
 
                     <!-- Opportunities -->
-                    <div class="bg-white p-6 rounded-2xl shadow-soft border-t-4 border-blue-500">
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-soft border-t-4 border-blue-500">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3 text-blue-600"><i class="fa-solid fa-lightbulb"></i></div>
                             <h3 class="text-xl font-bold text-gray-900">Opportunities</h3>
@@ -352,7 +425,7 @@
                     </div>
 
                     <!-- Threats -->
-                    <div class="bg-white p-6 rounded-2xl shadow-soft border-t-4 border-amber-500">
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-soft border-t-4 border-amber-500">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-3 text-amber-600"><i class="fa-solid fa-shield-halved"></i></div>
                             <h3 class="text-xl font-bold text-gray-900">Threats</h3>
@@ -369,7 +442,7 @@
             </div>
         </div>
 
-        <!-- SLIDE 8: Project Charter - Information & Criteria -->
+        <!-- SLIDE 9: Project Charter - Information & Criteria -->
         <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-gray-50 text-gray-900">
             <div class="max-w-5xl mx-auto w-full">
                 <div class="flex items-center mb-6">
@@ -409,7 +482,7 @@
             </div>
         </div>
 
-        <!-- SLIDE 9: Project Charter - Scope & Schedule -->
+        <!-- SLIDE 10: Project Charter - Scope & Schedule -->
         <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-gray-50 text-gray-900">
             <div class="max-w-5xl mx-auto w-full">
                 <div class="flex items-center mb-6">
@@ -455,7 +528,7 @@
             </div>
         </div>
 
-        <!-- SLIDE 10: Project Charter - Assumptions & Risks -->
+        <!-- SLIDE 11: Project Charter - Assumptions & Risks -->
         <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-white">
             <div class="max-w-4xl mx-auto w-full">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Assumptions & Risk Management</h2>
@@ -492,7 +565,7 @@
             </div>
         </div>
 
-        <!-- SLIDE 11: Resource Requirements 1 -->
+        <!-- SLIDE 12: Resource Requirements 1 -->
         <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-subtle-dot">
             <div class="max-w-5xl mx-auto w-full">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Resource Requirements <span class="text-xl text-gray-400 font-light">1/2</span></h2>
@@ -532,46 +605,142 @@
             </div>
         </div>
 
-        <!-- SLIDE 12: Resource Requirements 2 -->
+        <!-- SLIDE 13: Resource Requirements 2 (Financial & Timeline) -->
         <div class="slide flex flex-col p-8 md:p-16 h-full justify-center bg-subtle-dot">
-            <div class="max-w-5xl mx-auto w-full">
+            <div class="max-w-6xl mx-auto w-full">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Resource Requirements <span class="text-xl text-gray-400 font-light">2/2</span></h2>
-                <p class="text-gray-500 mb-10 text-lg font-light">Financial & Physical Resource Needs.</p>
+                <p class="text-gray-500 mb-8 text-lg font-light">Financial Plan, Timeline & Physical Assets.</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Finance -->
-                    <div class="bg-white p-8 rounded-3xl shadow-soft border border-gray-100">
-                        <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                    <!-- Finance Table (Detailed Breakdown) -->
+                    <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
                             <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center mr-3"><i class="fa-solid fa-wallet text-green-600"></i></div>
-                            Financial Resources
+                            Financial Details (CAPEX & OPEX)
                         </h3>
-                        <div class="bg-gray-50 p-4 rounded-xl mb-6 text-center shadow-inner">
-                            <span class="block text-xs text-gray-500 uppercase tracking-widest mb-1">Total Estimate</span>
-                            <span class="text-lg font-bold text-gray-800">IDR 250 Million - IDR 350 Million</span>
+                        <div class="overflow-y-auto overflow-x-auto rounded-xl border border-gray-100 flex-1">
+                            <table class="w-full text-sm text-left text-gray-600 relative">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 sticky top-0 shadow-sm">
+                                    <tr>
+                                        <th class="px-4 py-3 w-1/4 border-b border-gray-200">Category</th>
+                                        <th class="px-4 py-3 border-b border-gray-200">Item Description</th>
+                                        <th class="px-4 py-3 whitespace-nowrap text-right border-b border-gray-200">Est. Cost (IDR)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-50 text-xs">
+                                    <!-- CAPEX Breakdown -->
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-2.5 font-bold text-gray-900 align-top" rowspan="4">CAPEX<br><span class="text-gray-400 font-normal text-[10px]">(Total: 170M)</span></td>
+                                        <td class="px-4 py-2.5">Team Salaries (6 Months)</td>
+                                        <td class="px-4 py-2.5 text-right font-medium">120,000,000</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-2.5">Hardware & Testing Devices</td>
+                                        <td class="px-4 py-2.5 text-right font-medium">20,000,000</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-2.5">Software Licenses & Dev Tools</td>
+                                        <td class="px-4 py-2.5 text-right font-medium">20,000,000</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 border-b-2 border-gray-200">
+                                        <td class="px-4 py-2.5">UI/UX Design Assets & Branding</td>
+                                        <td class="px-4 py-2.5 text-right font-medium">10,000,000</td>
+                                    </tr>
+                                    <!-- OPEX Breakdown -->
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-2.5 font-bold text-gray-900 align-top" rowspan="4">OPEX<br><span class="text-gray-400 font-normal text-[10px]">(Total: 80M)</span></td>
+                                        <td class="px-4 py-2.5">Marketing & CAC (Campus Campaigns)</td>
+                                        <td class="px-4 py-2.5 text-right font-medium">40,000,000</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-2.5">Cloud Hosting & Infrastructure</td>
+                                        <td class="px-4 py-2.5 text-right font-medium">15,000,000</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-2.5">Field Ops & Co-working Space</td>
+                                        <td class="px-4 py-2.5 text-right font-medium">15,000,000</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-2.5">Legal, Admin & T&C Setup</td>
+                                        <td class="px-4 py-2.5 text-right font-medium">10,000,000</td>
+                                    </tr>
+                                    <!-- TOTAL -->
+                                    <tr class="bg-green-50 font-bold text-green-800 text-sm border-t border-green-200">
+                                        <td class="px-4 py-3" colspan="2">Total Initial Estimate</td>
+                                        <td class="px-4 py-3 text-right">250,000,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <ul class="space-y-4 text-sm text-gray-600">
-                            <li><strong class="text-gray-900 block">CAPEX (Capital Exp):</strong> Development capital, 6-month developer salaries, software licenses, design creation.</li>
-                            <li><strong class="text-gray-900 block">OPEX (Operational Exp):</strong> Customer Acquisition Cost (Malang campus campaigns), cloud rent, field team operations.</li>
-                        </ul>
                     </div>
 
-                    <!-- Physical -->
-                    <div class="bg-white p-8 rounded-3xl shadow-soft border border-gray-100">
-                        <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center mr-3"><i class="fa-solid fa-laptop text-amber-600"></i></div>
-                            Physical Resources
+                    <!-- Timeline Table -->
+                    <div class="bg-white p-6 rounded-3xl shadow-soft border border-gray-100 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mr-3"><i class="fa-solid fa-calendar-check text-blue-600"></i></div>
+                            Project Timeline
                         </h3>
-                        <ul class="space-y-4 text-sm text-gray-600">
-                            <li><strong class="text-gray-900 block">Main Hardware:</strong> High-spec laptops for optimal programming & graphic design workloads.</li>
-                            <li><strong class="text-gray-900 block">Testing Devices:</strong> Various smartphone variants (iOS/Android) focusing on mid-range devices to ensure UAT smoothness.</li>
-                            <li><strong class="text-gray-900 block">Co-working Space:</strong> Physical workspace with stable internet for daily team synchronization (<em>Daily Standup</em>).</li>
-                        </ul>
+                        <div class="overflow-x-auto rounded-xl border border-gray-100 flex-1">
+                            <table class="w-full text-sm text-left text-gray-600">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 border-b border-gray-100">
+                                    <tr>
+                                        <th class="px-4 py-3">Phase</th>
+                                        <th class="px-4 py-3">Key Milestone / Activity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-50">
+                                        <td class="px-4 py-2.5 font-semibold text-gray-900 whitespace-nowrap">Month 1</td>
+                                        <td class="px-4 py-2.5">Project Initiation & UI/UX Prototyping</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-50">
+                                        <td class="px-4 py-2.5 font-semibold text-gray-900 whitespace-nowrap">Month 2-3</td>
+                                        <td class="px-4 py-2.5">Backend, Database & Merchant Dashboard</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-50">
+                                        <td class="px-4 py-2.5 font-semibold text-gray-900 whitespace-nowrap">Month 4</td>
+                                        <td class="px-4 py-2.5">Mobile Frontend & Payment Gateway</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-50">
+                                        <td class="px-4 py-2.5 font-semibold text-gray-900 whitespace-nowrap">Month 5</td>
+                                        <td class="px-4 py-2.5">Smart Match AI, System Integration, QA/UAT</td>
+                                    </tr>
+                                    <tr class="bg-blue-50 font-bold text-blue-800">
+                                        <td class="px-4 py-2.5 whitespace-nowrap">Month 6</td>
+                                        <td class="px-4 py-2.5">Deployment, Merchant Training & Go-Live</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Physical Sub-section -->
+                <div class="bg-white p-5 rounded-3xl shadow-soft border border-gray-100">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center mr-3"><i class="fa-solid fa-laptop text-amber-600 text-sm"></i></div>
+                        Physical Resources
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-desktop text-amber-500 mt-1 mr-3"></i>
+                            <p class="text-sm text-gray-600"><strong class="text-gray-900 block">Main Hardware:</strong> High-spec laptops for dev & design.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-mobile-screen-button text-amber-500 mt-1 mr-3"></i>
+                            <p class="text-sm text-gray-600"><strong class="text-gray-900 block">Testing Devices:</strong> Various smartphones (iOS/Android) for UAT.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-building text-amber-500 mt-1 mr-3"></i>
+                            <p class="text-sm text-gray-600"><strong class="text-gray-900 block">Co-working Space:</strong> Stable internet for Daily Standups.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-        <!-- SLIDE 13: Closing -->
+        <!-- SLIDE 14: Closing -->
         <div class="slide flex flex-col justify-center items-center p-12 text-center bg-white h-full">
             <h1 class="text-5xl md:text-7xl font-light text-gray-300 mb-4 tracking-tight">
                 Thank You.
